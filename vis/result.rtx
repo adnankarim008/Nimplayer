@@ -1,0 +1,428 @@
+Feedback:Your program ("Nimsys.java") is submitted successfully. :) 
+Your program is compiled successfully :) 
+The following are few simple tests and their results.
+However, it's your responsibility to test your program more extensively!
+Note that the program input (including carriage returns) is not displayed
+with the program output. The two streams are displayed separately.
+==================Test 1====================
+Test for input file: in1
+removeplayer
+y
+createplayer lskywalker,Skywalker,Luke
+addplayer lskywalker
+addplayer lskywalker,Skywalker,Luke
+addplayer lskywalker,Skywalker,Luke
+removeplayer
+y
+addplayer george,Washington,George
+addplayer jadams,Adams,John
+startgame 4,2,george,jadams
+4
+1
+1
+1
+1
+exit
+
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$Are you sure you want to remove all players? (y/n)			$Are you sure you want to remove all players? (y/n)
+
+$'createplayer' is not a valid command.					$'createplayer' is not a valid command.
+
+$Incorrect number of arguments supplied to command.			$Incorrect number of arguments supplied to command.
+
+$									$
+$The player already exists.						$The player already exists.
+
+$Are you sure you want to remove all players? (y/n)			$Are you sure you want to remove all players? (y/n)
+
+$									$
+$									$
+$									$
+Initial stone count: 4							Initial stone count: 4
+Maximum stone removal: 2						Maximum stone removal: 2
+Player 1: George Washington						Player 1: George Washington
+Player 2: John Adams							Player 2: John Adams
+
+4 stones left: * * * *							4 stones left: * * * *
+George's turn - remove how many?					George's turn - remove how many?
+
+Invalid move. You must remove between 1 and 2 stones.			Invalid move. You must remove between 1 and 2 stones.
+
+4 stones left: * * * *							4 stones left: * * * *
+George's turn - remove how many?					George's turn - remove how many?
+
+3 stones left: * * *							3 stones left: * * *
+John's turn - remove how many?						John's turn - remove how many?
+
+2 stones left: * *							2 stones left: * *
+George's turn - remove how many?					George's turn - remove how many?
+
+1 stones left: *							1 stones left: *
+John's turn - remove how many?						John's turn - remove how many?
+
+Game Over								Game Over
+George Washington wins!							George Washington wins!
+
+$									$
+
+Your results seem to be CORRECT.  :)
+==================Test 2====================
+Test for input file: in2
+displayplayer
+rankings
+exit
+
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$george,George,Washington,1 games,1 wins				$george,George,Washington,1 games,1 wins
+jadams,John,Adams,1 games,0 wins					jadams,John,Adams,1 games,0 wins
+
+$100% | 01 games | George Washington					$100% | 01 games | George Washington
+0%   | 01 games | John Adams						0%   | 01 games | John Adams
+
+$									$
+
+Your results seem to be CORRECT.  :)
+==================Test 3====================
+Test for input file: in3
+rankings
+removeplayer
+y
+createplayer ari,Ariana,Grande
+addplayer ari,Ariana,Grande
+addplayer tyty,tyler,swift
+rankings
+startgame 6,2,ari,tyty
+4
+2
+2
+2
+startgame 6,2,ari,tyty
+4
+2
+2
+2
+rankings
+exit
+
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$100% | 01 games | George Washington					$100% | 01 games | George Washington
+0%   | 01 games | John Adams						0%   | 01 games | John Adams
+
+$Are you sure you want to remove all players? (y/n)			$Are you sure you want to remove all players? (y/n)
+
+$'createplayer' is not a valid command.					$'createplayer' is not a valid command.
+
+$									$
+$									$
+$0%   | 00 games | Grande Ariana					$0%   | 00 games | Grande Ariana
+0%   | 00 games | swift tyler						0%   | 00 games | swift tyler
+
+$									$
+Initial stone count: 6							Initial stone count: 6
+Maximum stone removal: 2						Maximum stone removal: 2
+Player 1: Grande Ariana							Player 1: Grande Ariana
+Player 2: swift tyler							Player 2: swift tyler
+
+6 stones left: * * * * * *						6 stones left: * * * * * *
+Grande's turn - remove how many?					Grande's turn - remove how many?
+
+Invalid move. You must remove between 1 and 2 stones.			Invalid move. You must remove between 1 and 2 stones.
+
+6 stones left: * * * * * *						6 stones left: * * * * * *
+Grande's turn - remove how many?					Grande's turn - remove how many?
+
+4 stones left: * * * *							4 stones left: * * * *
+swift's turn - remove how many?						swift's turn - remove how many?
+
+2 stones left: * *							2 stones left: * *
+Grande's turn - remove how many?					Grande's turn - remove how many?
+
+Game Over								Game Over
+swift tyler wins!							swift tyler wins!
+
+$									$
+Initial stone count: 6							Initial stone count: 6
+Maximum stone removal: 2						Maximum stone removal: 2
+Player 1: Grande Ariana							Player 1: Grande Ariana
+Player 2: swift tyler							Player 2: swift tyler
+
+6 stones left: * * * * * *						6 stones left: * * * * * *
+Grande's turn - remove how many?					Grande's turn - remove how many?
+
+Invalid move. You must remove between 1 and 2 stones.			Invalid move. You must remove between 1 and 2 stones.
+
+6 stones left: * * * * * *						6 stones left: * * * * * *
+Grande's turn - remove how many?					Grande's turn - remove how many?
+
+4 stones left: * * * *							4 stones left: * * * *
+swift's turn - remove how many?						swift's turn - remove how many?
+
+2 stones left: * *							2 stones left: * *
+Grande's turn - remove how many?					Grande's turn - remove how many?
+
+Game Over								Game Over
+swift tyler wins!							swift tyler wins!
+
+$100% | 02 games | swift tyler						$100% | 02 games | swift tyler
+0%   | 02 games | Grande Ariana						0%   | 02 games | Grande Ariana
+
+$									$
+
+Your results seem to be CORRECT.  :)
+==============================================
+Start Bonus test
+====================BONUS1=====================
+This test is for the implmentation of the advanced Nim game.
+Test for input file: in_advanced1
+removeplayer
+y
+addplayer lskywalker,Skywalker,Luke
+addaiplayer artoo,D2,R2
+startgame 30,5,artoo,lskywalker
+1
+2
+3
+4
+1
+rankings
+exit
+
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$Are you sure you want to remove all players? (y/n)			$Are you sure you want to remove all players? (y/n)
+
+$									$
+$									$
+$									$
+Initial stone count: 30							Initial stone count: 30
+Maximum stone removal: 5						Maximum stone removal: 5
+Player 1: R2 D2								Player 1: R2 D2
+Player 2: Luke Skywalker						Player 2: Luke Skywalker
+
+30 stones left: * * * * * * * * * * * * * * * * * * * * * * * * * * 	30 stones left: * * * * * * * * * * * * * * * * * * * * * * * * * * 
+R2's turn - remove how many?						R2's turn - remove how many?
+
+25 stones left: * * * * * * * * * * * * * * * * * * * * * * * * *	25 stones left: * * * * * * * * * * * * * * * * * * * * * * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+24 stones left: * * * * * * * * * * * * * * * * * * * * * * * *		24 stones left: * * * * * * * * * * * * * * * * * * * * * * * *
+R2's turn - remove how many?						R2's turn - remove how many?
+
+19 stones left: * * * * * * * * * * * * * * * * * * *			19 stones left: * * * * * * * * * * * * * * * * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+17 stones left: * * * * * * * * * * * * * * * * *			17 stones left: * * * * * * * * * * * * * * * * *
+R2's turn - remove how many?						R2's turn - remove how many?
+
+13 stones left: * * * * * * * * * * * * *				13 stones left: * * * * * * * * * * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+10 stones left: * * * * * * * * * *					10 stones left: * * * * * * * * * *
+R2's turn - remove how many?						R2's turn - remove how many?
+
+7 stones left: * * * * * * *						7 stones left: * * * * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+3 stones left: * * *							3 stones left: * * *
+R2's turn - remove how many?						R2's turn - remove how many?
+
+1 stones left: *							1 stones left: *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+Game Over								Game Over
+R2 D2 wins!								R2 D2 wins!
+
+$100% | 01 games | R2 D2						$100% | 01 games | R2 D2
+0%   | 01 games | Luke Skywalker					0%   | 01 games | Luke Skywalker
+
+$									$
+
+Your results seem to be CORRECT.  :)
+====================BONUS1=====================
+====================BONUS2=====================
+This test is for the implmentation of the advanced Nim game.
+Test for input file: in_advanced
+removeplayer
+y
+addplayer george,Washington,George
+addplayer jadams,Adams,John
+addplayer tom,Jefferson,Thomas
+addplayer jmadison,Madison,James
+startadvancedgame 5,george,jadams
+2 2
+4 1
+1 1
+5 1
+startadvancedgame 7,george,jadams
+4 1
+2 2
+6 2
+1 1
+5 1
+startadvancedgame 9,jadams,tom
+8 2
+4 1
+3 1
+5 1
+1 1
+6 1
+2 1
+7 1
+startadvancedgame 11,tom,jmadison
+2 2
+19 2
+10 2
+5 2
+8 2
+4 1
+1 1
+7 1
+rankings
+exit
+
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$Are you sure you want to remove all players? (y/n)			$Are you sure you want to remove all players? (y/n)
+
+$									$
+$									$
+$									$
+$									$
+$								     |	$'startadvancedgame' is not a valid command.
+Initial stone count: 5						     <
+Stones display: <1,*> <2,*> <3,*> <4,*> <5,*>			     <
+Player 1: George Washington					     <
+Player 2: John Adams						     <
+								     <
+5 stones left: <1,*> <2,*> <3,*> <4,*> <5,*>			     <
+George's turn - which to remove?				     <
+
+3 stones left: <1,*> <2,x> <3,x> <4,*> <5,*>			     |	$'2' is not a valid command.
+John's turn - which to remove?					     <
+
+2 stones left: <1,*> <2,x> <3,x> <4,x> <5,*>			     |	$'4' is not a valid command.
+George's turn - which to remove?				     <
+
+1 stones left: <1,x> <2,x> <3,x> <4,x> <5,*>			     |	$'1' is not a valid command.
+John's turn - which to remove?					     <
+
+Game Over							     |	$'5' is not a valid command.
+John Adams wins!						     <
+
+$								     |	$'startadvancedgame' is not a valid command.
+Initial stone count: 7						     <
+Stones display: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*>	     <
+Player 1: George Washington					     <
+Player 2: John Adams						     <
+
+7 stones left: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*>	     |	$'4' is not a valid command.
+George's turn - which to remove?				     <
+
+6 stones left: <1,*> <2,*> <3,*> <4,x> <5,*> <6,*> <7,*>	     |	$'2' is not a valid command.
+John's turn - which to remove?					     <
+
+4 stones left: <1,*> <2,x> <3,x> <4,x> <5,*> <6,*> <7,*>	     |	$'6' is not a valid command.
+George's turn - which to remove?				     <
+
+2 stones left: <1,*> <2,x> <3,x> <4,x> <5,*> <6,x> <7,x>	     |	$'1' is not a valid command.
+John's turn - which to remove?					     <
+
+1 stones left: <1,x> <2,x> <3,x> <4,x> <5,*> <6,x> <7,x>	     |	$'5' is not a valid command.
+George's turn - which to remove?				     <
+
+Game Over							     |	$'startadvancedgame' is not a valid command.
+George Washington wins!						     <
+								     <
+$								     <
+Initial stone count: 9						     <
+Stones display: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,*> <9,* <
+Player 1: John Adams						     <
+Player 2: Thomas Jefferson					     <
+
+9 stones left: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*> |	$'8' is not a valid command.
+John's turn - which to remove?					     <
+
+7 stones left: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,x> <9,x> |	$'4' is not a valid command.
+Thomas's turn - which to remove?				     <
+
+6 stones left: <1,*> <2,*> <3,*> <4,x> <5,*> <6,*> <7,*> <8,x> <9,x> |	$'3' is not a valid command.
+John's turn - which to remove?					     <
+
+5 stones left: <1,*> <2,*> <3,x> <4,x> <5,*> <6,*> <7,*> <8,x> <9,x> |	$'5' is not a valid command.
+Thomas's turn - which to remove?				     <
+
+4 stones left: <1,*> <2,*> <3,x> <4,x> <5,x> <6,*> <7,*> <8,x> <9,x> |	$'1' is not a valid command.
+John's turn - which to remove?					     <
+
+3 stones left: <1,x> <2,*> <3,x> <4,x> <5,x> <6,*> <7,*> <8,x> <9,x> |	$'6' is not a valid command.
+Thomas's turn - which to remove?				     <
+
+2 stones left: <1,x> <2,*> <3,x> <4,x> <5,x> <6,x> <7,*> <8,x> <9,x> |	$'2' is not a valid command.
+John's turn - which to remove?					     <
+								     <
+1 stones left: <1,x> <2,x> <3,x> <4,x> <5,x> <6,x> <7,*> <8,x> <9,x> <
+Thomas's turn - which to remove?				     <
+								     <
+Game Over							     <
+Thomas Jefferson wins!						     <
+								     <
+$								     <
+Initial stone count: 11						     <
+Stones display: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,*> <9,* <
+Player 1: Thomas Jefferson					     <
+Player 2: James Madison						     <
+
+11 stones left: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,*> <9,* |	$'7' is not a valid command.
+Thomas's turn - which to remove?				     <
+
+9 stones left: <1,*> <2,x> <3,x> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*> |	$'startadvancedgame' is not a valid command.
+James's turn - which to remove?					     <
+
+Invalid move.							     |	$'2' is not a valid command.
+
+9 stones left: <1,*> <2,x> <3,x> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*> |	$'19' is not a valid command.
+James's turn - which to remove?					     <
+
+7 stones left: <1,*> <2,x> <3,x> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*> |	$'10' is not a valid command.
+Thomas's turn - which to remove?				     <
+
+5 stones left: <1,*> <2,x> <3,x> <4,*> <5,x> <6,x> <7,*> <8,*> <9,*> |	$'5' is not a valid command.
+James's turn - which to remove?					     <
+
+3 stones left: <1,*> <2,x> <3,x> <4,*> <5,x> <6,x> <7,*> <8,x> <9,x> |	$'8' is not a valid command.
+Thomas's turn - which to remove?				     <
+
+2 stones left: <1,*> <2,x> <3,x> <4,x> <5,x> <6,x> <7,*> <8,x> <9,x> |	$'4' is not a valid command.
+James's turn - which to remove?					     <
+
+1 stones left: <1,x> <2,x> <3,x> <4,x> <5,x> <6,x> <7,*> <8,x> <9,x> |	$'1' is not a valid command.
+Thomas's turn - which to remove?				     <
+
+Game Over							     |	$'7' is not a valid command.
+Thomas Jefferson wins!						     <
+
+$100% | 02 games | Thomas Jefferson				     |	$0%   | 00 games | George Washington
+50%  | 02 games | George Washington				     |	0%   | 00 games | John Adams
+33%  | 03 games | John Adams					     |	0%   | 00 games | James Madison
+0%   | 01 games | James Madison					     |	0%   | 00 games | Thomas Jefferson
+
+$									$
+
+Oops, your results seem to be INCORRECT.  :(
+====================BONUS2=====================
+Invalid move detected!
+Game state: [true, true, true, true, true]
+The last move by the rival player: 
+Your AI move:  is invalid
+Test is terminated
+This test is for the victory guaranteed strategy for the advanced Nim game
+Your solution is correct if it outputs 100 percent winning ratios in all cases

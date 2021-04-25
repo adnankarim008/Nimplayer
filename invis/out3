@@ -1,0 +1,64 @@
+Welcome to Nim
+
+$100% | 01 games | George Washington
+0%   | 01 games | John Adams
+
+$Are you sure you want to remove all players? (y/n)
+
+$'createplayer' is not a valid command.
+
+$
+$
+$0%   | 00 games | Grande Ariana
+0%   | 00 games | swift tyler
+
+$
+Initial stone count: 6
+Maximum stone removal: 2
+Player 1: Grande Ariana
+Player 2: swift tyler
+
+6 stones left: * * * * * *
+Grande's turn - remove how many?
+
+Invalid move. You must remove between 1 and 2 stones.
+
+6 stones left: * * * * * *
+Grande's turn - remove how many?
+
+4 stones left: * * * *
+swift's turn - remove how many?
+
+2 stones left: * *
+Grande's turn - remove how many?
+
+Game Over
+swift tyler wins!
+
+$
+Initial stone count: 6
+Maximum stone removal: 2
+Player 1: Grande Ariana
+Player 2: swift tyler
+
+6 stones left: * * * * * *
+Grande's turn - remove how many?
+
+Invalid move. You must remove between 1 and 2 stones.
+
+6 stones left: * * * * * *
+Grande's turn - remove how many?
+
+4 stones left: * * * *
+swift's turn - remove how many?
+
+2 stones left: * *
+Grande's turn - remove how many?
+
+Game Over
+swift tyler wins!
+
+$100% | 02 games | swift tyler
+0%   | 02 games | Grande Ariana
+
+$
